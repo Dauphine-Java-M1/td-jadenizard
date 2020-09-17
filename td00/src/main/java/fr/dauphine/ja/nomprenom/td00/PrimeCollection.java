@@ -53,7 +53,7 @@ public class PrimeCollection {
 		
 		PrimeCollection col = new PrimeCollection(list);
 		
-		col.initRandom(100, 1000);
+		col.initRandom(100, 2000);
 			
 	col.printPrimes();
 	}
