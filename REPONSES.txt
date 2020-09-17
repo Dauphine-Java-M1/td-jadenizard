@@ -32,3 +32,7 @@ EX 3 :
 
 7) C'est un raccourci qui permet de renommer uniformément dans le projet le nom de classe/attribut.
 
+
+TP 2 :
+
+MODIFICATION
