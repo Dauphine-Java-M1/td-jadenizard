@@ -1,0 +1,34 @@
+Jade Nizard
+
+EX 1 : 
+
+4) Version 3.6.3
+
+5) GroupID représente le nom du package du projet de manière unique.
+   ArtefactID représente le nom du projet.
+
+6) src contient les répertoires main et les tests.
+
+8) C'est le chemin d'accès au répertoire avec les classes Java à exécuter.
+
+13) Cela permet de compiler le projet avec une version différente (précisée entre les balises) de la version maven qu'on a.
+    On donne la valeur 1.8
+
+
+
+EX 2 :
+
+1) J'ai une erreur d'accès au fichier;
+
+EX 3 :
+
+3) C'est un raccourci pour écrire System.out.println();.
+
+4) C'est un raccourci pour créer une méthode toString.
+
+5) C'est un raccourci pour créer une méthode main.
+
+6) C'est un raccourci pour créer un getter et un setter.
+
+7) C'est un raccourci qui permet de renommer uniformément dans le projet le nom de classe/attribut.
+
