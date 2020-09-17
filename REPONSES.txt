@@ -58,4 +58,6 @@ On voit que des commits n'ont pas pu être faits et le master n'est pas en haut 
 
 Ex 3 :
 
-
+2) Le test est validé (car vert).
+  Cette fois ci est rouge donc non validés.
+  Cette méthode dit si son paramètre est vrai ( true oui et false non).

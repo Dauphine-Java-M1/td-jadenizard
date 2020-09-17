@@ -1,5 +1,7 @@
 package fr.dauphine.ja.nomprenom.td00;
 
+import java.util.ArrayList;
+
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -31,8 +33,33 @@ public class PrimeCollectionTest
     /**
      * Rigourous Test :-)
      */
-    public void testApp()
+    public void testPrimeCollection()
     {
         assertTrue( true );
+    }
+    
+    ArrayList<Integer> list =new ArrayList<>();
+	PrimeCollection col = new PrimeCollection(list);
+    
+    public void test0IsPrime()
+    {
+    	
+		
+    	assertEquals(true, col.isPrime(0));
+
+    }
+    
+    public void testTwoIsPrime()
+    {
+   
+		
+    	assertEquals(true, col.isPrime(2));
+    }
+    
+    
+    public void test9IsPrime()
+    {
+    
+    	assertEquals(false, col.isPrime(9));
     }
 }
