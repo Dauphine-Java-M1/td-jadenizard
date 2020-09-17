@@ -32,6 +32,30 @@ EX 3 :
 
 7) C'est un raccourci qui permet de renommer uniformément dans le projet le nom de classe/attribut.
 
-TP 2 : 
 
-Modification fichier original
+
+TP 2 :
+
+EX 1 : 
+
+2) Les fichiers se trouvant dans le répertoire target comme le fichier jar
+
+5)Cela nous montre ce qui a changé dans les fichiers (ici de 1000 à 2000).
+
+8) hash du premier commit : 91dbcf80b24dbbef007cac41b1e2ff13ba68b947
+
+
+EX 2 :
+
+3) Les deux dépôts sont reliés par un trait pour montrer la synchronisation.
+
+5) Il y a deja des modifications sur le dépôt lointain qu'il faudrait récupérer avant de push d'autres modifications.
+
+6) Dans le fichier il y a les deux modifications des javaavance et son clone sur le fichier.
+On voit que des commits n'ont pas pu être faits et le master n'est pas en haut de l'historique.
+
+7) Il y aurait eu les deux modifications séparées par des = pour résoudre le conflit il faudrait choisir.
+
+Ex 3 :
+
+
