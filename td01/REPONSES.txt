@@ -1,0 +1,32 @@
+REPONSES
+
+EX1
+
+1) Cela fonctionne car il y a un constructeur par défaut de base qui met à 0 les variable int.
+
+2) On ne peut pas accéder à x et y car ce sont des champs privés. Il faudrait faire des getter dans Point ou en changeant l'accessibilité des attributs (public par exemple).
+
+3) Pour pas que n'importe qui puisse les modifier et donc protéger nos attributs.
+
+4) Un accesseur est une fonction qui permet de retourner l'attribut et donc d'y accéder même s'il est privé. On pourrait le faire ici.
+
+5)Le constructeur par défaut ,'existe plus maintenant qu'on a créé notre propre constructeur.
+
+
+6) Cela ne change rien, cela fonctionne on appelle les arguments comme on veut
+
+7) On crée un attribut statique qui compte le nombre d'instances de la classe ( on incréments dans le constructeur).
+
+8) Il sait quel constructeur appeler grace aux paraître avec lequel on appelle le constructeur.
+
+EX2
+
+1) true/false car l'opération == teste si les deux objets ont les mêmes coordonnées et non la même valeur.
+
+3) Il faut rajouter le type Point dans les chevrons de new ArrayList<>; Ensuite, p3 devrait être dans la liste à l'indice 0 car il est identique à p1 qui y est.
+
+
+EX 3
+
+
+
