@@ -28,5 +28,26 @@ EX2
 
 EX 3
 
+2) Sans ce contrôle, on peut dépasser la capacité du tableau donnée par l'utilisateur. Une possibilité est d'ajouter une vérification sur la taille du tableau en argument.
 
+5) brokenline.contains(null)) renvoie false. add(null) lui fonctionne mais lorsque l'on appeler contains() renvoie java.lang.NullPointerException.
+
+6) On n'a pas besoin de changer. Les méthode de tableau sont transformées pour correspondre aux LinkedList.
+
+EX 4
+ 
+1) public void translate(int dx, int dy). On a plusieurs possibilité : multiplier/diviser x par dx et y par dy, remplacer les valeurs de x par dx et y par dy, ... etc.
+
+
+5) Il y a eu une translation des deux cercles car ils partagent la même variable de"centre du cercle" qu'on a modifiée. Chaque cercle doit avoir son propre centre.
+
+6) Cela fait un appel à la méthode translate de Point et nom de Circle.
+
+9) Oui, car elle ne dépend pas de l'instance sur laquelle elle est appelée.
+
+EXERCICE 5 
+
+1) L'hériatge nous permettra de récupérer les attributs et les méthodes de cercle. Comme l'anneau est composé d'un cercle auquel on rajoute des caractéristiques, on peut voir l'anneau comme un enfant de Circle.
+
+4) Cela appelle le toString de Circle, on doit Override cette méthode toString dans Ring pour que ce soit elle qui soit appelée.
 

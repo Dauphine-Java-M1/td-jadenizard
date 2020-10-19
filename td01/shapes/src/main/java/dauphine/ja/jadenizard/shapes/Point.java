@@ -25,27 +25,17 @@ public class Point {
 	
 
 
-
 	public int getX() {
 		return x;
 	}
-
-
-
 
 	public void setX(int x) {
 		this.x = x;
 	}
 
-
-
-
 	public int getY() {
 		return y;
 	}
-
-
-
 
 	public void setY(int y) {
 		this.y = y;
@@ -76,6 +66,10 @@ public class Point {
 
 
 	
+	public void translate(int dx, int dy) {
+		x = dx;
+		y = dy;
+	}
 	
 	
 	public static void main(String[] args) {
@@ -84,10 +78,6 @@ public class Point {
 		System.out.println(p);
 
 		
-		
-		System.out.println("\nEX 2 \n");
-		
-		
 		Point p1=new Point(1,2);
 		Point p2=p1;
 		Point p3=new Point(1,2);
@@ -95,12 +85,13 @@ public class Point {
 		System.out.println(p1==p2);
 		System.out.println(p1==p3);
 		
+		
 		ArrayList<Point> list = new ArrayList<Point>();
 		list.add(p1);
 		System.out.println(list.indexOf(p2));
-		System.out.println(list.indexOf(p3));
+		System.out.println(list.indexOf(p3) + "\n");
 		
-		System.out.println("\nEX 3 \n");
+		
 	}
 
 }
