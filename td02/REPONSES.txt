@@ -1,0 +1,82 @@
+Jade Nizard
+
+EX 1 : 
+
+1) le main affiche 42, 42, 24, 24, 24,24
+Les quatre premiers affichages sont facilement prévisibles car ils font appel aux méthodes et attributs de leur classes respectives. Fille a redéfinit la méthode meth() qui est donc celle appelée par les instances Filles.
+
+Pour la dernière création d'instance : on crée un objet de type réel Fille même s'il est déclaré en tant que Mere (donc type plus large). Lors de l'execution, c'est le type réel quoi regarde donc Fille. C'est pourquoi e sont les méthodes de la classe Fille qui sont prioritaires lors de l'appel car c'est le type réel (Fille) qui prédomine.
+
+2)  Dans Fille, on peut accéder à la méthode meth() de Mere en écrivant super.meth() qu'il comprenne qu'on veut la méthode d'au-dessus.
+Dans Main, un objet Fille n'a accès qu'à une seule méthode meth(), celle de Fille car on ne peut faire de super.
+
+3) le main affiche 42,42,24, 42, 42, 42
+Si les meth sont des statiques, les deux premiers print retournent bien les valeurs des meth() de Mere car on l'appelle sur un objet mere donc de classe Mere.
+Le 3e print appelle le meth sur une Fille donc envoie bien 24.
+Le 4e print appelle printmeth() de Mere qui appelle meth sur rien car statique donc c'est la méthode de Mere qui est appelée.
+Le 5e  print affiche 42 car on ne regarde pas l'instance mais la classe et ici mereFille est de Classe Mere donc c'est lui qui est appelé.
+Le 6e print affiche 42 car une fois dans printMeth, le meth() appelée est statique donc celui de la classe (ici Mere).
+
+4)le main affiche 42,42,24, 42, 42, 42
+Si les meth sont des champs, alors cela fonctionne comme dans le cas où les méthodes meth() sont statiques. En effet, soit on est une instance Mere (print 1 et 2) et cela va appeler la variable meth=42.
+Soit on est une instance Fille et son attribut meth=24 (print 3).
+Néanmoins, si on appelle printMeth sur une fille déclarée en Mere (print 5), alors il y a un conflit sur la variable meth et il va afficher l'attribut meth référencé par le nom de la class (ici Mere) donc = 42.
+Enfin, le dernier print affiche 42 car une fois dans printMeth, ça appelle l'attribut meth de la classe =42 (print 6).
+
+
+EX 2
+
+1) 
+- private void e() {System.out.println("Fille_e");}
+On ne peut jamais réduire l'accessibilité d'une méthode lors de sa redefinition dans une classe fille (public à private).
+
+- char h() {System.out.println("Fille_h"); return 'c';}
+On doit garder le même type de retour (int) pour bien redéfinir la méthode.
+
+- int i() {System.out.println("Fille_i"); return 3; }
+On doit garder le même type de retour (void) pour bien redéfinir la méthode.
+
+ - void k() throws Exception {System.out.println("Fille_k");  }
+On doit garder le même type de throw d'exception pour bien redéfinir la méthode
+
+ - mere.miage();
+Il n'y a pas de telle méthode dans Mere
+
+ - mereFille.miage();
+Le compilateur regarde le type déclaré qui est Mere, or il n'y a pas de telle méthode dans Mere.
+
+3) Une redéfinition est une méthode ayant le même nom qu'un des méthodes meres avec la même signature.
+Une surcharge est une méthode avec la même signature sauf le nombres d'arguments qui peut varier afin de distinguer lors de l'appel la méthode de celle qu'elle surcharge.
+
+Surcharge : c(Mere mere) de c(), c (Fille f) de c(Mere mere), d(Mere mere), g()
+
+
+Redéfinition : a(), b(Fille f),  c(Mere mere), c (Fille f),d(), f(), void j(),void l(), m()
+
+
+
+4)
+-appel à la méthode miage() de Fille qui affiche image
+-appelle à nouveau miage() de Fille car à l'execution on regarde le type réel(Fille)
+-appel à la méthode a() de Mere qui affiche Mere_a
+-appel à la méthode a() redéfinie chez Fille (car lors de l'execution on regarde le type réel de la variable mereFille de type réel Fille) qui affiche Fille_a
+-appel à la méthode a() redéfinie chez Fille qui affiche Fille_a
+-appel à la méthode a() redéfinie chez Fille (car lors de l'execution  on regarde le type réel de la variable mereFille de type réel Fille malgré le cast) qui affiche Fille_a
+-appel à la méthode b() redéfinie chez Fille (car lors de l'execution  on regarde le type réel de la variable mereFille de type réel Fille) qui affiche Fille_b(Fille)
+-appel à la méthode c() de Mere dont Fille hérite (et qu'elle ne redéfinit pas) et qui affiche Mere_c
+-appel à la méthode c(Mere) redéfinie chez Fille (car lors de l'execution  on regarde le type réel de la variable mereFille de type réel Fille) qui affiche Fille_c(Mere)
+-appel à la méthode c(Mere) a nouveau. En effet la variable mereFille passée en argument de c() est considérée comme de type Mere. Cela affiche Fille_c(Mere)
+- Je ne sais pas
+-appel à la méthode c(Fille) définie dans la classe Fille qui affiche Fille_c(Fille)
+-appel à la méthode d() de Mere qui affiche static Mere_d
+-appel à la méthode d() de Mere car comme c'est une méthode statique on regarde le type déclaré de Mere fille ( soit Mere) qui affiche static Mere_d
+-appel à la méthode printF()de Mere appelant elle-même la méthode f() de Mere qui affiche Mere_f
+-appel à la méthode printF()de Mere dont Fille hérite (et qu'elle ne redéfinit pas) qui appelle elle-même la méthode f() de Mere qui est la plus proche et affiche Mere_f
+-appel à la méthode j() de Fille (qui est le type réel de mereFille que l'on regarde à l'execution). Cela affiche Fille_j
+-appel à la méthode k()de Mere dont Fille hérite (et qu'elle ne redéfinit pas) qui affiche Mere_k
+-appel à la méthode l() de Fille (qui est le type réel de mereFille que l'on regarde à l'execution). Cela affiche Fille_l
+-appel à la méthode m() de Fille (qui est le type réel de mereFille que l'on regarde à l'execution). Cela affiche Fille_m
+
+EX 3
+
+
